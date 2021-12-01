@@ -55,14 +55,14 @@
                 <tbody>
                 <?php while($row = mysqli_fetch_assoc($result)){ ?>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Md Ripon Mia</td>
-                    <td>01770766181</td>
-                    <td>Dhaka</td>
-                    <td>riponmia@gmail.com</td>
-                    <td>630371</td>
-                    <td>ADM 82</td>
-                    <td>7500</td>
+                    <th scope="row"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
+                    <td><?php echo $row['address']; ?></td>
+                    <td><?php echo $row['gmail']; ?></td>
+                    <td><?php echo $row['roll']; ?></td>
+                    <td><?php echo $row['batch']; ?></td>
+                    <td><?php echo $row['ammount']; ?></td>
                     <td>
                       <a href="#" class="btn btn-info">View</a>
                       <a href="#" class="btn btn-warning">Edit</a>
