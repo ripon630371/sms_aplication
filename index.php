@@ -1,3 +1,13 @@
+<?php
+  //$con = mysqli_connect("localhost","my_user","my_password","my_db");
+  $conn = mysqli_connect('localhost','root','','sms');
+
+  $sql = "SELECT * FROM students";
+  $result = mysqli_query($conn,$sql);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +28,50 @@
         <div class="row">
           <div class="smstop mt-50">
             <div class="col-12">
-              <h1>Students List</h1>
+              <h1 class="text-center">SMS Aplication</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <a href="#" class="btn btn-info"> New Students</a>
+          </div>
+          <div class="col-10">
+            <div class="stu-table">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">SL No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Gmail</th>
+                    <th scope="col">Roll</th>
+                    <th scope="col">Batch</th>
+                    <th scope="col">Advance</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php while($row = mysqli_fetch_assoc($result)){ ?>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Md Ripon Mia</td>
+                    <td>01770766181</td>
+                    <td>Dhaka</td>
+                    <td>riponmia@gmail.com</td>
+                    <td>630371</td>
+                    <td>ADM 82</td>
+                    <td>7500</td>
+                    <td>
+                      <a href="#" class="btn btn-info">View</a>
+                      <a href="#" class="btn btn-warning">Edit</a>
+                      <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
