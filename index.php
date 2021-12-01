@@ -34,7 +34,7 @@
         </div>
         <div class="row">
           <div class="col-2">
-            <a href="#" class="btn btn-info"> New Students</a>
+            <a href="insert.php" class="btn btn-info"> New Students</a>
           </div>
           <div class="col-10">
             <div class="stu-table">
