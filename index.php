@@ -64,7 +64,7 @@
                     <td><?php echo $row['batch']; ?></td>
                     <td><?php echo $row['ammount']; ?></td>
                     <td>
-                      <a href="#" class="btn btn-info">View</a>
+                      <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
                       <a href="#" class="btn btn-warning">Edit</a>
                       <a href="#" class="btn btn-danger">Delete</a>
                     </td>
