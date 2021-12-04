@@ -36,9 +36,9 @@
           <div class="col-2">
             <a href="index.php" class="btn btn-primary">  Students List</a>
           </div>
-          <div class="col-10">
+          <div class="col-12">
             <div class="studentslist">
-                <form>
+                <form action="store.php" method="post">
                 <div class="form-group">
                     <label for="Name">Name : </label>
                     <input type="text" class="form-control"   placeholder="Name" name="name">
@@ -67,7 +67,7 @@
                     <label for="Name">Ammount : </label>
                     <input type="text" class="form-control"   placeholder="Ammount" name="ammount">
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <button type="submit" class="btn btn-primary mt-2" name="submit">Submit</button>
                 </form>
             </div>
           </div>
