@@ -11,7 +11,7 @@ $conn = mysqli_connect( 'localhost', 'root', '', 'sms');
 $sql = "INSERT INTO students VALUES (Null,'$name','$phone','$address','$gmail','$roll','$batch','$ammount')";
 
 if(mysqli_query($conn,$sql)){
-    header("Location: index.php");
+    header("Location: index.php?success=1");
 }else{
-    echo "Not Insert";
+    header("Location: insert.php?error=1");
 }

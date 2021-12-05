@@ -28,13 +28,18 @@
         <div class="row">
           <div class="smstop mt-50">
             <div class="col-12">
-              <h1 class="text-center">SMS Aplication</h1>
+              <h1 class="text-center">SMS Aplication</h1></br>
+              <?php if(isset($_GET['success'])) { ?>
+              <div class="alert alert-success" role="alert">
+                This is a success alert—check it out!
+              </div>
+              <?php } ?>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-2">
-            <a href="index.php" class="btn btn-info"> New Students</a>
+            <a href="insert.php" class="btn btn-info"> New Students</a>
           </div>
           <div class="col-10">
             <div class="stu-table">
