@@ -34,7 +34,7 @@
         </div>
         <div class="row">
           <div class="col-2">
-            <a href="insert.php" class="btn btn-info"> New Students</a>
+            <a href="index.php" class="btn btn-info"> New Students</a>
           </div>
           <div class="col-10">
             <div class="stu-table">
@@ -65,8 +65,8 @@
                     <td><?php echo $row['ammount']; ?></td>
                     <td>
                       <a href="show.php?id=<?php echo $row['id']; ?>" class="btn btn-info">View</a>
-                      <a href="#" class="btn btn-warning">Edit</a>
-                      <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+                      <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
+                      <a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure delete me!'); " class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
                   <?php } ?>
